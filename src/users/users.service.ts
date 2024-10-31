@@ -5,7 +5,7 @@ import { DbService } from 'src/db/db.service';
 export class UsersService {
   constructor(private db: DbService) {}
   findByEmail(email: string) {
-    this.db.user.findFirst({
+    return this.db.user.findFirst({
       where: {
         email,
       },
